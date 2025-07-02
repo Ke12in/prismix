@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prismix</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div id="splash">
+    <div class="splash-content">
+      <div class="splash-logo">🎨</div>
+      <h1>Welcome to <span class="prismix">Prismix</span></h1>
+      <div class="splash-anim"></div>
+    </div>
+  </div>
+  <div class="app-container">
+    <aside class="sidebar">
+      <h2>Prismix</h2>
+      <nav>
+        <ul>
+          <li class="nav-item active" data-section="gallery"><i class="fa fa-images"></i> Gallery</li>
+          <li class="nav-item" data-section="convert"><i class="fa fa-exchange-alt"></i> Convert</li>
+          <li class="nav-item" data-section="edit"><i class="fa fa-edit"></i> Edit</li>
+        </ul>
+      </nav>
+      <button id="themeToggle" class="theme-toggle-sticky" title="Toggle dark/light mode">
+        <i class="fa fa-moon"></i>
+        <span id="themeLabel">Light Mode</span>
+      </button>
+    </aside>
+    <main class="main-content">
+      <section id="gallery-section" class="section active">
+        <h3>Gallery</h3>
+        <div class="upload-area" id="uploadArea">
+          <input type="file" id="fileInput" multiple accept="image/*" style="display:none;">
+          <button id="uploadBtn"><i class="fa fa-upload"></i> Upload Images</button>
+          <p>or drag & drop images here</p>
+        </div>
+        <div class="gallery-grid" id="galleryGrid"></div>
+      </section>
+      <section id="convert-section" class="section">
+        <h3>Convert Image</h3>
+        <div id="convertTools"></div>
+      </section>
+      <section id="edit-section" class="section">
+        <h3>Edit Image</h3>
+        <div id="editorTools">
+          <button id="addEmojiBtn"><i class="fa fa-smile"></i> Emoji</button>
+          <button id="removeBgBtn"><i class="fa fa-eraser"></i> Remove Background</button>
+        </div>
+        <canvas id="editorCanvas"></canvas>
+      </section>
+    </main>
+  </div>
+  <script src="app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@rembg/rembg-js@2.0.0/dist/bundle.umd.js"></script>
+</body>
+</html> 
